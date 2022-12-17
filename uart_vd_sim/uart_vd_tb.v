@@ -37,6 +37,12 @@ initial begin
     #(`clk_period * 250);               
     $stop;
 end  
+    //waveform generation
+initial
+begin
+    $dumpfile("uart_vd_tb.vcd");
+$dumpvars();
+end
 //-------------------------------------------------------------------------------    
 
 endmodule
