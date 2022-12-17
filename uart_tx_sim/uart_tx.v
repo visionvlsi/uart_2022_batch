@@ -17,10 +17,10 @@ localparam  s_idle   = 5'b00001,
             s_done   = 5'b10000;    
             
 //localparam  BPS_CNT =   CLK_FREQUENCE/BAUD_RATE-1,     (50_000_000 / 9600) - 1 = 5207;          
- localparam t_1_bit = 16'd5207;   
+// localparam t_1_bit = 16'd5207;   
 
 //This is for simulation;
-//localparam t_1_bit = 9;      //from 0 to 9, it is 10; 
+localparam t_1_bit = 9;      //from 0 to 9, it is 10; 
         
 reg en_cnt;
 reg [15:0] cnt;
