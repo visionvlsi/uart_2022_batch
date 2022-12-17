@@ -40,7 +40,7 @@ end
     //waveform generation
 initial
 begin
-    $dumpfile("uart_vd_tb.vcd");
+$dumpfile("uart_vd_tb.vcd");
 $dumpvars();
 end
 //-------------------------------------------------------------------------------    
