@@ -1,0 +1,10 @@
+read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog uart_rx.v
+synth -top uart_rx
+dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty sky130_fd_sc_hd__tt_025C_1v80.lib
+clean
+flatten
+write_verilog -noattr netlist_uart_rx.v
+tee -o report_uart_rx.txt stat -liberty sky130_fd_sc_hd__tt_025C_1v80.lib
+show -stretch -prefix ./netlist_schematic_uart_rx -format jpeg
